@@ -1,0 +1,14 @@
+#!/bin/bash
+antlr4 -Dlanguage=JavaScript -visitor ./Select.g4 -package selectPackage
+replace antlr4/index ../../index SelectLexer.js SelectLexer_.js
+replace antlr4/index ../../index SelectListener.js SelectListener_.js
+replace antlr4/index ../../index SelectVisitor.js SelectVisitor_.js
+replace antlr4/index ../../index SelectParser.js SelectParser_.js
+cp SelectLexer_.js SelectLexer.js
+rm SelectLexer_.js
+cp SelectListener_.js SelectListener.js
+rm SelectListener_.js
+cp SelectVisitor_.js SelectVisitor.js
+rm SelectVisitor_.js
+cp SelectParser_.js SelectParser.js
+rm SelectParser_.js
