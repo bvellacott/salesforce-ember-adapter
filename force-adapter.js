@@ -580,6 +580,9 @@ Papu.SF.Adapter = DS.RESTAdapter.extend({
 			}
 		});
     },
+    // For ember 2.0 compatibility
+    shouldReloadAll : function(store, snapshot) { return store.peekAll( snapshot.type.modelName ).get("length") <= 0; },
+    shouldBackgroundReloadRecord : function(store, snapshot) { return true; },
 });
 
 //Leave onSuccess out if you don't want to populate metadata on construction
