@@ -16,11 +16,11 @@ The adapter has been tested with:
 To setup examples and a guide of how to use the adapter go to:
 https://github.com/bvellacott/fa-examples
 
-A big thank you amongst many goes to:
+#A big thank you amongst many goes to:
 
-The creators and developers of antlr: www.antlr.org
+#The creators and developers of antlr: www.antlr.org
   I used antlr to create a stripped down soql parser in the browser so I could test the adapter without a salesforce connection. 
-The creators of GitHub Salesforce Deploy Tool: https://github.com/afawcett/githubsfdeploy
+#The creators of GitHub Salesforce Deploy Tool: https://github.com/afawcett/githubsfdeploy
   I used your tool to create the easy examples setup - What a great tool!
   
   Thank you very much!
