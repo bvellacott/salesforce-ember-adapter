@@ -1,4 +1,4 @@
-# papu force adapter
+# papu salesforce ember adapter
 This is a salesforce data adapter for Ember.js utilising the salesforce soap api and is supported with tooling which automatically creates the needed ember models from the sobject schema.
 
 Supports:
