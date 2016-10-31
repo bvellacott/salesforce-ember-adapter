@@ -11,7 +11,7 @@
 //copies or substantial portions of the Software.
 //
 //THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//IMPLIED, INCLUDING BUT 	NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 //FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 //AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 //LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
@@ -23,7 +23,7 @@ if(!$)
 	throw 'jQuery version 1.11.3 is required';
 if(!Ember)
 	throw 'Ember version 1.11.1 is required';
-if(!Ember)
+if(!DS)
 	throw 'Ember data version 1.13.4 is required';
 if(!Papu)
 	var Papu = {};
@@ -460,12 +460,12 @@ Papu.SF.factory = {
 // Put it into use with the followhing line:
 // App.ApplicationAdapter = Papu.SF.Adapter;
 Papu.SF.Adapter = DS.RESTAdapter.extend({
-    find : function(store, type, id, snapshot) {
-    	return this.findRecord(store, type, id, snapshot);
-    },
-    findRecord : function(store, type, id, snapshot) {
-    	return this.query(store, type, "Id = '" + id + "'");
-    },
+  find : function(store, type, id, snapshot) {
+  	return this.findRecord(store, type, id, snapshot);
+  },
+  findRecord : function(store, type, id, snapshot) {
+  	return this.query(store, type, "Id = '" + id + "'");
+  },
 	createRecord: function(store, type, snapshot) {
 		return new Ember.RSVP.Promise(function(resolve, reject) {
 			try {
